@@ -2,6 +2,7 @@ body {
     box-sizing: border-box;
     position: relative;
     font-family: 'Roboto', sans-serif;
+    background-color: $color-background;
 }
 
 .overlay {
@@ -17,7 +18,7 @@ body {
 .modal {
     width: 250px;
     height: 350px;
-    margin: 15% auto auto;
+    margin: 10% auto auto;
     position: relative;
     text-align: center;
     background: #fff;

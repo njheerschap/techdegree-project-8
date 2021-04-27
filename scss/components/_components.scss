@@ -11,6 +11,17 @@
     }
 }
 
+.search-container {
+    margin-left: 15px;
+}
+
+.search {
+    width: 50%;
+    height: 50px;
+    border: 1px solid #d0d8db;
+    border-radius: 5px;
+}
+
 .card {
     display: flex;
     border: 1px solid lightgrey;
