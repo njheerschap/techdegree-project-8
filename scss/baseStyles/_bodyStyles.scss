@@ -6,7 +6,8 @@ body {
 
 .overlay {
     position: absolute;
-    top: 0;
+    height: 110%;
+    top: -25px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -14,7 +15,8 @@ body {
 }
 
 .modal {
-    width: 375px;
+    width: 250px;
+    height: 350px;
     margin: 15% auto auto;
     position: relative;
     text-align: center;
@@ -22,6 +24,9 @@ body {
     border: 1px solid #778;
     border-radius: 5px;
     padding: 30px 20px;
+    @include for-md-screen {
+        width: 275px;
+    }
 }
 
 .modal-close {
@@ -31,6 +36,6 @@ body {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
+// .hidden {
+//     display: none;
+// }

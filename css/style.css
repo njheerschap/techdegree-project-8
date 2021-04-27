@@ -345,15 +345,17 @@ body {
 
 .overlay {
   position: absolute;
-  top: 0;
+  height: 110%;
+  top: -25px;
   left: 0;
   right: 0;
   bottom: 0;
-  background: #646464;
+  background: rgba(100, 100, 100, 0.5);
 }
 
 .modal {
-  width: 375px;
+  width: 250px;
+  height: 350px;
   margin: 15% auto auto;
   position: relative;
   text-align: center;
@@ -362,16 +364,17 @@ body {
   border-radius: 5px;
   padding: 30px 20px;
 }
+@media (min-width: 768px) {
+  .modal {
+    width: 275px;
+  }
+}
 
 .modal-close {
   position: absolute;
   right: 15px;
   top: 5px;
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 .grid-container {
@@ -398,7 +401,9 @@ body {
   font-size: 0.85rem;
   text-align: center;
   font-weight: 300;
-  margin: 25px 15px;
+  margin-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .heading {
@@ -415,7 +420,8 @@ body {
   height: 135px;
 }
 
-.avatar {
+.avatar,
+.modal-avatar {
   width: 100px;
   height: 100px;
   margin: 0 15px;
@@ -432,20 +438,55 @@ body {
 
 .name,
 .email,
-.address {
+.address,
+.phone,
+.dob {
   margin: 2px 0;
   flex: 0 0 100%;
 }
 
 .email,
-.address {
+.address,
+.phone,
+.dob {
   font-weight: 300;
   font-size: 0.8rem;
   color: darkgrey;
 }
 
 .name {
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+
+.modal-close {
+  background-color: transparent;
+  border: none;
+  font-size: 0.75rem;
+}
+
+.modal-avatar {
+  width: 125px;
+  height: 125px;
+}
+
+.modal-name,
+.modal-email,
+.modal-address,
+.phone,
+.dob {
+  padding: 3px 0;
+}
+
+.modal-name {
+  margin-top: 15px;
+}
+
+hr {
+  width: 90%;
+  height: 1px;
+  margin: 25px 0;
+  background-color: lightgrey;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

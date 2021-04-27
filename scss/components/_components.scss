@@ -2,7 +2,9 @@
     font-size: .85rem;
     text-align: center;
     font-weight: 300;
-    margin: 25px 15px;
+    margin-left: 15px;
+    padding-top: 25px;
+    padding-bottom: 10px;
     @include for-md-screen {
         font-size: 1rem;
         text-align: left;
@@ -17,7 +19,8 @@
     height: 135px;
 }
 
-.avatar{
+.avatar, 
+.modal-avatar {
     width: 100px;
     height: 100px;
     margin: 0 15px;
@@ -34,19 +37,56 @@
 
 .name ,
 .email, 
-.address {
+.address,
+.phone,
+.dob {
     margin: 2px 0;
     flex: 0 0 100%;
 }
 
 .email,
-.address {
+.address,
+.phone,
+.dob {
     font-weight: 300;
     font-size: .8rem;
     color: darkgrey;
 }
 
 .name {
-    font-size: 1rem;
+    font-size: .9rem;
+}
+
+//Overlay Styles
+
+.modal-close {
+    background-color: transparent;
+    border: none;
+    font-size: .75rem;
+}
+
+.modal-avatar {
+    width: 125px;
+    height: 125px;
+}
+
+.modal-name,
+.modal-email,
+.modal-address,
+.phone,
+.dob {
+    padding: 3px 0;
+}
+
+.modal-name {
+    margin-top: 15px;
+}
+
+hr {
+    width: 90%;
+    height: 1px;
+    margin: 25px 0;
+    background-color: lightgrey;
+    border: none;
 }
 
