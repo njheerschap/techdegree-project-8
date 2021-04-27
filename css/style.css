@@ -377,6 +377,10 @@ body {
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 .grid-container {
   display: grid;
   margin: 15px;
