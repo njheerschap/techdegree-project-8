@@ -355,9 +355,9 @@ body {
 }
 
 .modal {
-  width: 250px;
+  width: 160px;
   height: 350px;
-  margin: 10% auto auto;
+  margin: 13% auto auto;
   position: relative;
   text-align: center;
   background: #fff;
@@ -384,7 +384,6 @@ body {
 
 .grid-container {
   display: grid;
-  margin: 15px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 135px);
   gap: 15px;
@@ -393,6 +392,7 @@ body {
 }
 @media (min-width: 768px) {
   .grid-container {
+    margin: 15px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -434,6 +434,7 @@ body {
   border-radius: 5px;
   width: 100%;
   height: 135px;
+  cursor: pointer;
 }
 
 .avatar,
@@ -495,6 +496,35 @@ body {
 
 .modal-name {
   margin-top: 15px;
+}
+
+.modal-next,
+.modal-previous {
+  display: inline-block;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0.8;
+  cursor: pointer;
+  user-select: none;
+}
+
+.modal-previous {
+  position: absolute;
+  width: 50px;
+  margin: 0;
+  font-size: 1.75rem;
+  top: 40%;
+  right: 105%;
+}
+
+.modal-next {
+  position: absolute;
+  width: 50px;
+  margin: 0;
+  font-size: 1.75rem;
+  top: 40%;
+  left: 105%;
 }
 
 hr {

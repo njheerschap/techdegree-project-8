@@ -1,12 +1,12 @@
 .grid-container {
     display: grid;
-    margin: 15px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 135px);
     gap: 15px;
     justify-items: center;
     align-items: center;
     @include for-md-screen {
+        margin: 15px;
         grid-template-columns: repeat(2, 1fr);
     }
     @include for-lg-screen {

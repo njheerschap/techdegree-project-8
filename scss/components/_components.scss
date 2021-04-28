@@ -28,6 +28,7 @@
     border-radius: 5px;
     width: 100%;
     height: 135px;
+    cursor: pointer;
 }
 
 .avatar, 
@@ -92,6 +93,35 @@
 .modal-name {
     margin-top: 15px;
 }
+
+.modal-next,
+.modal-previous {
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    opacity: .8;
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-previous {
+    position: absolute;
+    width: 50px;
+    margin: 0;
+    font-size: 1.75rem;
+    top: 40%;
+    right: 105%;
+}
+.modal-next {
+    position: absolute;
+    width: 50px;
+    margin: 0;
+    font-size: 1.75rem;
+    top: 40%;
+    left: 105%;
+}
+
 
 hr {
     width: 90%;
