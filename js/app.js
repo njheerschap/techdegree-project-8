@@ -109,6 +109,8 @@ searchBar.addEventListener('keyup', e => {
     
 })
 
+// Modal Next/Previous Functionality
+
 const next = document.querySelector('.modal-next');
 const previous = document.querySelector('.modal-previous');
 
