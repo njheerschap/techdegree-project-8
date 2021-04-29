@@ -339,15 +339,17 @@ template {
 
 body {
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   position: relative;
   font-family: "Roboto", sans-serif;
   background-color: #f5fcff;
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   height: 110%;
-  top: -25px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -393,7 +395,10 @@ body {
 }
 @media (min-width: 768px) {
   .grid-container {
-    margin: 15px;
+    margin-top: 15px;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -407,31 +412,31 @@ body {
   font-size: 0.85rem;
   text-align: center;
   font-weight: 300;
-  margin-left: 15px;
+  margin-top: 0;
   padding-top: 25px;
   padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .heading {
+    margin-left: 2.5%;
     font-size: 1rem;
     text-align: left;
   }
 }
 
 .search-container {
-  margin-left: 5px;
   margin-bottom: 10px;
   text-align: center;
 }
 @media (min-width: 768px) {
   .search-container {
-    margin-left: 15px;
+    margin-left: 2.5%;
     text-align: left;
   }
 }
 
 .search {
-  width: 95%;
+  width: 90%;
   height: 50px;
   border: 1px solid #d0d8db;
   border-radius: 5px;

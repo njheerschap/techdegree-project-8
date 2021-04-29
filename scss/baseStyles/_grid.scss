@@ -7,7 +7,10 @@
     justify-items: center;
     align-items: center;
     @include for-md-screen {
-        margin: 15px;
+        margin-top: 15px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        width: 95%;
         grid-template-columns: repeat(2, 1fr);
     }
     @include for-lg-screen {

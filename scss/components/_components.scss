@@ -2,27 +2,27 @@
     font-size: .85rem;
     text-align: center;
     font-weight: 300;
-    margin-left: 15px;
+    margin-top: 0;
     padding-top: 25px;
     padding-bottom: 10px;
     @include for-md-screen {
+        margin-left: 2.5%;
         font-size: 1rem;
         text-align: left;
     }
 }
 
 .search-container {
-    margin-left: 5px;
     margin-bottom: 10px;
     text-align: center;
     @include for-md-screen {
-        margin-left: 15px;
+        margin-left: 2.5%;
         text-align: left;
     }
 }
 
 .search {
-    width: 95%;
+    width: 90%;
     height: 50px;
     border: 1px solid #d0d8db;
     border-radius: 5px;
