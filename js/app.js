@@ -47,15 +47,15 @@ function displayEmployees(employeeData) {
 // Display Modal with additional Employee Info 
 
 function displayModal(index) {
-    let name = employees[index].name;
-    let email = employees[index].email;
-    let phone = employees[index].phone;
-    let city = employees[index].location.city;
-    let street = employees[index].location.street;
-    let state = employees[index].location.state;
-    let postcode = employees[index].location.postcode;
-    let dob = new Date(employees[index].dob.date);
-    let picture = employees[index].picture;
+    const name = employees[index].name;
+    const email = employees[index].email;
+    const phone = employees[index].phone;
+    const city = employees[index].location.city;
+    const street = employees[index].location.street;
+    const state = employees[index].location.state;
+    const postcode = employees[index].location.postcode;
+    const dob = new Date(employees[index].dob.date);
+    const picture = employees[index].picture;
 
     const modalHTML = `
         <div class="modal-html" modal-index="${index}"> 
@@ -112,84 +112,23 @@ searchBar.addEventListener('keyup', e => {
 const next = document.querySelector('.modal-next');
 const previous = document.querySelector('.modal-previous');
 
-function nextEmployeeModal () {
-    let modalIndex = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'));
-    let modalAdd = modalIndex + 1;
-    let modalNext = modalAdd.toString();
-    let name = employees[modalNext].name;
-    let email = employees[modalNext].email;
-    let phone = employees[modalNext].phone;
-    let city = employees[modalNext].location.city;
-    let street = employees[modalNext].location.street;
-    let state = employees[modalNext].location.state;
-    let postcode = employees[modalNext].location.postcode;
-    let dob = new Date(employees[modalNext].dob.date);
-    let picture = employees[modalNext].picture;
-
-    const modalHTML = `
-        <div class="modal-html" modal-index="${modalNext}"> 
-            <img src="${picture.large}" alt="" class="modal-avatar">
-            <div class="text-container">
-                <h2 class="name modal-name">${name.first} ${name.last}</h2>
-                <p class="email modal-email">${email}</p>
-                <p class="address modal-address">${city}</p>
-                <hr>
-                <p class="phone">${phone}</p>
-                <p class="address modal-address">${street.number} ${street.name}, ${state} ${postcode}</p>
-                <p class="dob">Birthday: ${dob.getMonth()}/${dob.getDay()}/${dob.getFullYear()}</p>
-            </div>
-        </div>
-    `
-
-    modalContainer.innerHTML = modalHTML;
-
-
-}
-
 next.addEventListener('click', e => {
-    let modalNumber = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'))
+    const modalIndex = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'));
+    const modalAdd = modalIndex + 1;
+    const index = modalAdd.toString();
+    const modalNumber = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'))
     if (modalNumber < 11) {
-        nextEmployeeModal();
+        displayModal(index);
     }
 })
 
-function previousEmployeeModal () {
-    let modalIndex = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'));
-    let modalAdd = modalIndex - 1;
-    let modalPrevious = modalAdd.toString();
-    let name = employees[modalPrevious].name;
-    let email = employees[modalPrevious].email;
-    let phone = employees[modalPrevious].phone;
-    let city = employees[modalPrevious].location.city;
-    let street = employees[modalPrevious].location.street;
-    let state = employees[modalPrevious].location.state;
-    let postcode = employees[modalPrevious].location.postcode;
-    let dob = new Date(employees[modalPrevious].dob.date);
-    let picture = employees[modalPrevious].picture;
-
-    const modalHTML = `
-        <div class="modal-html" modal-index="${modalPrevious}"> 
-            <img src="${picture.large}" alt="" class="modal-avatar">
-            <div class="text-container">
-                <h2 class="name modal-name">${name.first} ${name.last}</h2>
-                <p class="email modal-email">${email}</p>
-                <p class="address modal-address">${city}</p>
-                <hr>
-                <p class="phone">${phone}</p>
-                <p class="address modal-address">${street.number} ${street.name}, ${state} ${postcode}</p>
-                <p class="dob">Birthday: ${dob.getMonth()}/${dob.getDay()}/${dob.getFullYear()}</p>
-            </div>
-        </div>
-    `
-
-    modalContainer.innerHTML = modalHTML;
-
-
-}
 
 previous.addEventListener('click', e => {
-    let modalNumber = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'))
+    const modalIndex = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'));
+    const modalAdd = modalIndex - 1;
+    const index = modalAdd.toString();
+    const modalNumber = parseInt(document.querySelector('.modal-html').getAttribute('modal-index'))
     if (modalNumber > 0) {
-        previousEmployeeModal();
+        displayModal(index);
     }
 })
